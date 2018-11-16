@@ -1,21 +1,33 @@
 {
-  "name": "new",
+  "name": "react-yan-progress",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
+  "description": "This is a cascading progress bar component based on react",
+  "keywords": [
+    "react",
+    "react-component",
+    "progress-bar"
+  ],
   "main": "src/index.js",
   "dependencies": {
     "prop-types": "15.6.2",
-    "react": "16.5.2",
-    "react-dom": "16.5.2",
-    "react-scripts": "2.0.3"
+    "react": "16.5.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.1"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "build": "webpack --config webpack.config.js --progress --colors"
   },
-  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
