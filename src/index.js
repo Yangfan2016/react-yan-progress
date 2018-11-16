@@ -57,15 +57,13 @@ class YanProgress extends Component {
       <div
         className="y-progress"
         style={{
-          backgroundColor: this.props.tip[0].fillStyle || "#ccc"
-        }}
-      >
+          backgroundColor: this.state.tip[0].fillStyle || "#ccc"
+        }}>
         <a
           className="y-progress_text"
-          style={{ width: `${100 - this.state.donePercent}%` }}
-        >
+          style={{ width: `${100 - this.state.donePercent}%` }}>
           <span className="y-tooltip">
-            {this.props.tip[0].text.replace(
+            {this.state.tip[0].text.replace(
               "X",
               this.props.total < this.props.done
                 ? 0
@@ -77,15 +75,11 @@ class YanProgress extends Component {
           className="y-progress_bar"
           style={{
             width: `${this.state.donePercent}%`,
-            backgroundColor: this.props.tip[1].fillStyle || "#9c3"
-          }}
-        >
-          <a
-            className="y-progress_text"
-            style={{ width: `${100 - this.state.modifyPercent}%` }}
-          >
+            backgroundColor: this.state.tip[1].fillStyle || "#9c3"}}>
+          <a className="y-progress_text"
+            style={{ width: `${100 - this.state.modifyPercent}%` }}>
             <span className="y-tooltip">
-              {this.props.tip[1].text.replace(
+              {this.state.tip[1].text.replace(
                 "X",
                 this.props.done > this.props.total
                   ? this.props.total
@@ -93,16 +87,14 @@ class YanProgress extends Component {
               )}
             </span>
           </a>
-          <div
-            className="y-progress_bar"
+          <div className="y-progress_bar"
             style={{
               width: `${this.state.modifyPercent}%`,
-              backgroundColor: this.props.tip[2].fillStyle || "#080"
-            }}
-          >
+              backgroundColor: this.state.tip[2].fillStyle || "#080"
+            }}>
             <a className="y-progress_text" style={{ width: "100%" }}>
               <span className="y-tooltip">
-                {this.props.tip[2].text.replace(
+                {this.state.tip[2].text.replace(
                   "X",
                   this.props.modify > this.props.done
                     ? this.props.done
