@@ -1,6 +1,8 @@
-## react-yan-progress ![NPM version](https://img.shields.io/npm/v/react-yan-progress.svg?style=flat)
+## react-yan-progress 
+[![NPM version](https://img.shields.io/npm/v/react-yan-progress.svg?style=flat)](https://www.npmjs.com/package/react-yan-progress)
 
 This is a cascading progress bar component based on react
+![yan-progress](https://raw.githubusercontent.com/Yangfan2016/PicBed/master/Blog/yan-progress.gif)
 
 ### Installation
 ```bash
