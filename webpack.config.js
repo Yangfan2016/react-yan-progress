@@ -9,7 +9,7 @@ module.exports = {
 		path: path.resolve(__dirname, './build'),
 		filename: '[name].min.js',
 		publicPath: "./build/",
-		libraryTarget: 'umd',
+		libraryTarget: 'commonjs2',
 	},
 	module: {
 		rules: [
@@ -28,7 +28,7 @@ module.exports = {
 			{
 
 				test: /\.css$/,
-				loader: "css-loader",
+				loader: "style-loader!css-loader?modules&localIdentName=[hash:8]", // http://www.ruanyifeng.com/blog/2016/06/css_modules.html
 				include: path.resolve(__dirname, "./src/"),
 			}
 		]

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import "./index.css";
+import cssStyle from "./index.css";
 
 let CONF = {
   tip: [
@@ -55,14 +55,14 @@ class YanProgress extends Component {
   render() {
     return (
       <div
-        className="y-progress"
+        className={cssStyle["y-progress"]}
         style={{
           backgroundColor: this.state.tip[0].fillStyle || "#ccc"
         }}>
         <a
-          className="y-progress_text"
+          className={cssStyle["y-progress_text"]}
           style={{ width: `${100 - this.state.donePercent}%` }}>
-          <span className="y-tooltip">
+          <span className={cssStyle["y-tooltip"]}>
             {this.state.tip[0].text.replace(
               "X",
               this.props.total < this.props.done
@@ -72,13 +72,14 @@ class YanProgress extends Component {
           </span>
         </a>
         <div
-          className="y-progress_bar"
+          className={cssStyle["y-progress_bar"]}
           style={{
             width: `${this.state.donePercent}%`,
-            backgroundColor: this.state.tip[1].fillStyle || "#9c3"}}>
-          <a className="y-progress_text"
+            backgroundColor: this.state.tip[1].fillStyle || "#9c3"
+          }}>
+          <a className={cssStyle["y-progress_text"]}
             style={{ width: `${100 - this.state.modifyPercent}%` }}>
-            <span className="y-tooltip">
+            <span className={cssStyle["y-tooltip"]}>
               {this.state.tip[1].text.replace(
                 "X",
                 this.props.done > this.props.total
@@ -87,13 +88,13 @@ class YanProgress extends Component {
               )}
             </span>
           </a>
-          <div className="y-progress_bar"
+          <div className={cssStyle["y-progress_bar"]}
             style={{
               width: `${this.state.modifyPercent}%`,
               backgroundColor: this.state.tip[2].fillStyle || "#080"
             }}>
-            <a className="y-progress_text" style={{ width: "100%" }}>
-              <span className="y-tooltip">
+            <a className={cssStyle["y-progress_text"]} style={{ width: "100%" }}>
+              <span className={cssStyle["y-tooltip"]}>
                 {this.state.tip[2].text.replace(
                   "X",
                   this.props.modify > this.props.done
