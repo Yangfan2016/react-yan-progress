@@ -1,6 +1,17 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import cssStyle from "./index.css";
+import * as React from "react";
+import * as cssStyle from "./index.css";
+
+interface ITip {
+  text: string,
+  fillStyle: string,
+}
+
+interface IPropTypes {
+  total: number,
+  done: number,
+  modify: number,
+  tip: Array<ITip>,
+};
 
 let CONF = {
   tip: [
@@ -19,8 +30,9 @@ let CONF = {
   ],
 };
 
-class YanProgress extends Component {
-  constructor(props) {
+class YanProgress extends React.Component<IPropTypes> {
+  state:any;
+  constructor(props:IPropTypes) {
     super(props);
     this.state = {
       donePercent:
@@ -34,7 +46,7 @@ class YanProgress extends Component {
       tip: props.tip instanceof Array ? props.tip : CONF.tip,
     };
   }
-  componentWillReceiveProps({ done, modify }) {
+  componentWillReceiveProps({ done, modify }:any) {
     if (this.props.done !== done) {
       this.setState({
         donePercent:
@@ -109,12 +121,5 @@ class YanProgress extends Component {
     );
   }
 }
-
-YanProgress.propTypes = {
-  total: PropTypes.number.isRequired,
-  done: PropTypes.number.isRequired,
-  modify: PropTypes.number.isRequired,
-  tip: PropTypes.array,
-};
 
 export default YanProgress;
