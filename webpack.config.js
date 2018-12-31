@@ -25,6 +25,9 @@ module.exports = {
 					{
 						loader: 'ts-loader',
 					},
+					{
+						loader: 'tslint-loader',
+					}
 				],
 				include: path.resolve(__dirname, "./src/"),
 			},
