@@ -5,6 +5,7 @@
         "noImplicitAny": true,
         "module": "esnext",
         "target": "es6",
-        "jsx": "react"
+        "jsx": "react",
+        "moduleResolution":"node", // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/24788
     }
 }

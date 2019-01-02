@@ -28,19 +28,25 @@ ReactDOM.render(<App />, rootElement);
 
 ### API
 
-| 参数 | 说明 | 类型 | 可选值 | 默认值 |
-| :----: | :----: | :----: | :----: | :----: |
-| total | 总数 | number | — | — |
-| done | 已完成数 | number | — | — |
-| modify | 已批改数 | number | — | — |
-| tip | 自定义风格（数组包含3项，依次为：未完成、已提交、已批改的配置）|Array&lt;iTipConfig&gt;|—| — |
+| params | description | type | default |
+| :----: | :----: | :----: | :----: |
+| total | The total of progress | number | — | 
+| done | The number of done | number | — |
+| modify | The number of modified base on done | number | — |
+| tip | Custom Style (Array contains 3 items, in turn: uncomplete, done, and modified, each item configuration as shown in iTipConfig below)|iTipConfig|—|
 
 iTipConfig
 
-| 参数 | 说明 | 类型 | 可选值 | 默认值 |
-| :----: | :----: | :----: | :----: | :----: |
-| text | 提示文字（‘X’为占位符） | string | 同css颜色类型 | — |
-| fillStyle | 进度条的背景色 | string | 同css颜色类型 | — |
+| params | description | type | memo |
+| :----: | :----: | :----: | :----: | 
+| text | The tooltip text ('X'is a placeholder) | string | The color type same with CSS |
+| fillStyle | The background color of progress bar | string | The color type same with CSS |
+
+### Test
+
+```bash
+$ yarn run test
+```
 
 
 ### Contributing
