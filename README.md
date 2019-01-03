@@ -50,7 +50,22 @@ iTipConfig
 ```bash
 $ yarn run test
 ```
+### Dev
 
+link react-yan-progress
+```bash
+$ yarn link
+```
+
+test test-demo
+```bash
+$ yarn link react-yan-progress
+```
+
+unlink react-yan-progress
+```bash
+$ yarn unlink
+```
 
 ### Contributing
 - Fork this Repo first
