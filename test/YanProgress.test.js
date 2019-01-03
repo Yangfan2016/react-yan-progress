@@ -3,7 +3,6 @@ let expect = require("chai").expect;
 let React = require("react");
 let ReactDOM = require("react-dom");
 
-
 let app;
 let progressBar;
 let tipTextList;
