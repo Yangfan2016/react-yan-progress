@@ -30,37 +30,47 @@ let CONF = {
   ],
 };
 
+// 0-100(%)
+function calcDonePercent({ total, done }: any): number {
+  if (done <= 0 || total <= 0) {
+    return 0;
+  }
+  if (done > total) {
+    return 1e2;
+  }
+  return done / total * 1e2;
+}
+// 0-100(%)
+function calcModifyPercent({ total, done, modify }: any): number {
+  let donePercent = calcDonePercent({ total, done });
+  if (donePercent === 0) {
+    return 0;
+  }
+  if (modify > done) {
+    return 1e2;
+  }
+  return modify / done * 1e2;
+}
+
 class YanProgress extends React.Component<IPropTypes> {
-  state:any;
-  constructor(props:IPropTypes) {
+  state: any;
+  constructor(props: IPropTypes) {
     super(props);
     this.state = {
-      donePercent:
-        props.done === 0
-          ? 0
-          : (props.done >= props.total ? 1 : props.done / props.total) * 100,
-      modifyPercent:
-        props.modify === 0
-          ? 0
-          : (props.modify >= props.done ? 1 : props.modify / props.done) * 100,
+      donePercent: calcDonePercent(props),
+      modifyPercent: calcModifyPercent(props),
       tip: props.tip instanceof Array ? props.tip : CONF.tip,
     };
   }
-  componentWillReceiveProps({ done, modify }:any) {
+  componentWillReceiveProps({ done, modify }: any) { // watch props
     if (this.props.done !== done) {
       this.setState({
-        donePercent:
-          done === 0
-            ? 0
-            : (done >= this.props.total ? 1 : done / this.props.total) * 100
+        donePercent: calcDonePercent({ done, total: this.props.total }),
       });
     }
     if (this.props.modify !== modify) {
       this.setState({
-        donePercent:
-          modify === 0
-            ? 0
-            : (modify >= this.props.done ? 1 : modify / this.props.done) * 100
+        donePercent: calcModifyPercent({ modify, done: this.props.done }),
       });
     }
   }
