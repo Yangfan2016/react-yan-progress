@@ -6,9 +6,9 @@ branches:
   - master
 before_install:
     - export TZ='Asia/Shanghai' # 更改时区
-install: npm install
+install: yarn install
 script: 
-  - npm run build
-  - npm run test
+  - yarn run build
+  - yarn run test
 after_success:
-  - npm run coveralls
+  - yarn run coveralls
