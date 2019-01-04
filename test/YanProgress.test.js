@@ -1,7 +1,7 @@
-let YanProgress = require('../build/YanProgress.min.js').default;
 let expect = require("chai").expect;
 let React = require("react");
 let ReactDOM = require("react-dom");
+let YanProgress = require('../build/YanProgress.min.js').default;
 
 let app;
 let progressBar;
@@ -28,7 +28,6 @@ function removeDOM() {
     app.remove();
     app = null;
 }
-
 
 describe("render html", function () {
     beforeAll(function () {
