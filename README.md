@@ -1,7 +1,7 @@
 ## react-yan-progress 
 [![NPM version](https://img.shields.io/npm/v/react-yan-progress.svg?style=flat)](https://www.npmjs.com/package/react-yan-progress) 
 [![Build Status](https://travis-ci.org/Yangfan2016/react-yan-progress.svg?branch=master)](https://travis-ci.org/Yangfan2016/react-yan-progress)
-[![Coverage Status](https://coveralls.io/repos/github/Yangfan2016/react-yan-progress/badge.svg?branch=master)](https://coveralls.io/github/Yangfan2016/react-yan-progress?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/Yangfan2016/react-yan-progress/badge.svg)](https://coveralls.io/github/Yangfan2016/react-yan-progress)
 
 
 This is a cascading progress bar component based on react
