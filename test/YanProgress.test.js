@@ -141,7 +141,7 @@ describe("code strong", function () {
             .have
             .lengthOf(3);
     });
-    it("total > done", function () {
+    it("done > total", function () {
         TOTAL = 100;
         DONE = 600;
         MODIFY = 30;
