@@ -9,7 +9,9 @@ module.exports = {
 		path: path.resolve(__dirname, './build'),
 		filename: '[name].min.js',
 		publicPath: "./build/",
-		libraryTarget: 'commonjs2',
+		libraryTarget: 'umd',
+		library: 'YanProgress',
+		libraryExport: 'default',
 	},
 	module: {
 		rules: [

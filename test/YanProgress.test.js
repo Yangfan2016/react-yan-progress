@@ -1,7 +1,7 @@
 let expect = require("chai").expect;
 let React = require("react");
 let ReactDOM = require("react-dom");
-let YanProgress = require('../build/YanProgress.min.js').default;
+let YanProgress = require('../build/YanProgress.min.js');
 
 let app;
 let progressBar;
