@@ -1,6 +1,8 @@
 {
   "name": "react-yan-progress",
   "version": "0.2.0",
+  "author": "Yangfan",
+  "license": "MIT",
   "description": "This is a cascading progress bar component based on react",
   "keywords": [
     "react",
